@@ -1,0 +1,39 @@
+column,issue_type,row_count,pct_of_data,planned_resolution
+Age,implausible value (<10 or >90),0,0.0,cap or flag for manual review in notebook 02
+Video_Completion_Rate,out of 0-100 range,0,0.0,"cap to [0, 100] in notebook 02"
+Progress_Percentage,out of 0-100 range,0,0.0,"cap to [0, 100] in notebook 02"
+App_Usage_Percentage,out of 0-100 range,0,0.0,"cap to [0, 100] in notebook 02"
+Quiz_Score_Avg,out of 0-100 range,0,0.0,"cap to [0, 100] in notebook 02"
+Project_Grade,out of 0-100 range,0,0.0,"cap to [0, 100] in notebook 02"
+Instructor_Rating,out of 1-5 range,0,0.0,flag for manual review
+Login_Frequency,negative value,0,0.0,cap to 0 or investigate in notebook 02
+Time_Spent_Hours,negative value,0,0.0,cap to 0 or investigate in notebook 02
+Course_Duration_Days,negative value,0,0.0,cap to 0 or investigate in notebook 02
+Assignments_Submitted,negative value,0,0.0,cap to 0 or investigate in notebook 02
+Assignments_Missed,negative value,0,0.0,cap to 0 or investigate in notebook 02
+Quiz_Attempts,negative value,0,0.0,cap to 0 or investigate in notebook 02
+Payment_Amount,negative value,0,0.0,cap to 0 or investigate in notebook 02
+Support_Tickets_Raised,negative value,0,0.0,cap to 0 or investigate in notebook 02
+Completed,unexpected label outside Completed/Not Completed,0,0.0,investigate and standardize label
+Fee_Paid / Payment_Amount,Fee_Paid=No but Payment_Amount>0,10039,10.04,"not an error - confirm this maps to Scholarship payment mode, document as a business rule, do not overwrite"
+Progress_Percentage / Completed,Completed=Completed but Progress_Percentage<50,14342,29.25,not a data error - investigate in EDA whether Quiz_Score_Avg/Project_Grade drive completion instead of Progress_Percentage
+Enrollment_Date,"stored as text, needs datetime parsing",100000,100.0,parse with pd.to_datetime(format='%d-%m-%Y') in notebook 02
+Age,statistical outlier (IQR method),147,0.15,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Login_Frequency,statistical outlier (IQR method),374,0.37,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Average_Session_Duration_Min,statistical outlier (IQR method),582,0.58,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Discussion_Participation,statistical outlier (IQR method),1366,1.37,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Time_Spent_Hours,statistical outlier (IQR method),1102,1.1,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Days_Since_Last_Login,statistical outlier (IQR method),4048,4.05,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Notifications_Checked,statistical outlier (IQR method),1133,1.13,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Peer_Interaction_Score,statistical outlier (IQR method),323,0.32,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Assignments_Submitted,statistical outlier (IQR method),354,0.35,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Assignments_Missed,statistical outlier (IQR method),431,0.43,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Quiz_Attempts,statistical outlier (IQR method),765,0.76,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Quiz_Score_Avg,statistical outlier (IQR method),311,0.31,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Project_Grade,statistical outlier (IQR method),356,0.36,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Progress_Percentage,statistical outlier (IQR method),466,0.47,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Rewatch_Count,statistical outlier (IQR method),1259,1.26,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+App_Usage_Percentage,statistical outlier (IQR method),375,0.38,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Reminder_Emails_Clicked,statistical outlier (IQR method),1291,1.29,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Support_Tickets_Raised,statistical outlier (IQR method),6193,6.19,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
+Satisfaction_Rating,statistical outlier (IQR method),582,0.58,"review in notebook 02, cap only if it looks like a data entry error rather than real behavior"
