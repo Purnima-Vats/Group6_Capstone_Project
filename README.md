@@ -25,7 +25,7 @@ student-completion-capstone/
 │   ├── dashboard_app.py
 │   └── requirements.txt
 └── presentation/
-    └── Capstone_Project_Presentation.pptx
+    └── Capstone_Project_Presentation.pdf
 ```
 
 `presentation/` holds the slide deck for the project walkthrough, handled separately by the team.
